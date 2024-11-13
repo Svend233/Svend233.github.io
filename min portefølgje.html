@@ -8,94 +8,42 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
         }
-        .header {
+        header {
             background-color: #4CAF50;
             color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        .header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-        .intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .project {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            width: 280px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .project img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .footer {
-            text-align: center;
             padding: 20px;
+            text-align: center;
+        }
+        nav {
             background-color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
             color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Velkommen til Min Portefølje</h1>
-        <p>Oppdag mine prosjekter og arbeidserfaring</p>
-    </div>
+    <!-- Header with Title -->
+    <header>
+        <h1>Min Portefølje</h1>
+    </header>
 
-    <div class="container">
-        <div class="intro">
-            <h2>Hei mit navn er Svend</h2>
-            
-        </div>
-
-        <div class="projects">
-            <div class="project">
-                <img src="prosjekt1.jpg" alt="Prosjekt 1">
-                <h3>Prosjekt 1</h3>
-                <p>Kort beskrivelse av prosjektet ditt.</p>
-            </div>
-            <div class="project">
-                <img src="prosjekt2.jpg" alt="Prosjekt 2">
-                <h3>Prosjekt 2</h3>
-                <p>Kort beskrivelse av prosjektet ditt.</p>
-            </div>
-            <div class="project">
-                <img src="prosjekt3.jpg" alt="Prosjekt 3">
-                <h3>Prosjekt 3</h3>
-                <p>Kort beskrivelse av prosjektet ditt.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Kontakt: Svend_o_kan@outlook.com</p>
-    </div>
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#about">Om Meg</a>
+        <a href="#projects">Prosjekter</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
 
 </body>
 </html>
