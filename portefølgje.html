@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <link rel="stylesheet" href="main css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Portefølje</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Min Portefølje</h1>
+    </header>
+
+    <section id="about">
+        <h2>Velkomen</h2>
+        <p>mit navn er Svend</p>
+    </section>
+
+    <section id="projects">
+        <h2>Noen av mine små Prosjekter</h2>
+        <div class="project">
+            <h3>cisco pacet tracer</h3>
+            <p>Her har jeg laget et lite basis nett</p>
+            <img src="basisnett.png" alt="basis nett">
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <p>&copy; 2025 code Buddies</p>
+    </footer>
+
+    <button class="menu-button" onclick="toggleMenu()">Meny</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#about">Om Meg</a>
+        <a href="#projects">Prosjekter</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('dropdownMenu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('dropdownMenu');
+            var button = document.querySelector('.menu-button');
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
