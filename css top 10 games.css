@@ -34,6 +34,7 @@ header {
 
 .dropdown-menu {
     position: relative;
+    display: inline-block;
     text-align: center;
 }
 
@@ -51,18 +52,15 @@ header {
 }
 
 .menu-list {
-    display: none; 
+    display: none;
+    position: absolute;
+    background-color: var(--primary-bg);
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: var(--primary-bg);
-    position: absolute;
     width: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 100%;
-    z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .menu-list li {
@@ -79,24 +77,23 @@ header {
 .menu-list li a:hover {
     background-color: rgb(0, 0, 150);
 }
-p {
-    font-size: 20px;
-    margin: 20px 0;
-    padding: 0 20px;
-    text-align: center;
-    font-weight: 300;
-}
-h2 {
-    font-size: 24px;
-    margin: 20px 0;
-    padding: 0 20px;
-    text-align: center;
-}
-img {
-    max-width: 100%;
-    height: auto;
+
+
+.dropdown-menu:hover .menu-list {
     display: block;
-    margin: 0 auto;
+}
+.button-section {
+    text-align: center;
+    margin: 20px 0;
+}
+.button {
+    background-color: var(--primary-bg);
+    color: rgb(138, 0, 251);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
 }
 button {
     background-color: var(--primary-bg);
@@ -107,12 +104,6 @@ button {
     font-size: 16px;
     margin: 10px 0;
 }
-.button-section {
-    text-align: center;
-    margin: 20px 0;
-}
-
-
 div {
     margin: 150px;
     padding: 20px;
@@ -120,7 +111,18 @@ div {
     background-color: var(--primary-bg);
     color: white;
     box-shadow: 0 4px 6px rgba(238, 1, 1, 0.1);
+    text-align: center;
 }
+p {
+    font-weight: 300;
+}
+h2 {
+    font-size: 24px;
+    margin: 20px 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
 .button-section {
     position: fixed; 
     top: 50%; 
