@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Meg</title>
+    <link rel="stylesheet" href="css/css om meg.css">
+</head>
+<body>
+    <header>
+        <h1>Om Meg</h1>
+        <div id="menu-placeholder"></div>
+    </header>
+    
+    <div id="namn">
+        <h2> Hei mitt navn er Svend og her skal eg forklare lit om meg selv</h2>
+        <img src="/bilder/bilde av meg.jpg" alt="bilde av meg" width="500" height="400">
+    </div>
+
+    
+
+    <footer>
+        <p>&copy; 2025 Code Buddies</p>
+    </footer>
+</body>
+<script>
+    fetch("menu.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("menu-placeholder").innerHTML = html);
+
+    document.addEventListener('click', e => {
+        const menu = document.getElementById('dropdownMenu');
+        const button = document.querySelector('.menu-button');
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+            menu.style.display = 'none';
+        }
+    });
+
+    function toggleMenu() {
+        const menu = document.getElementById('dropdownMenu');
+        if (menu) menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+</html>

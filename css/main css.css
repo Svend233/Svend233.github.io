@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+header, footer {
+    background-color: #2201a6;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+section {
+    padding: 2em;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dropdown-menu {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    background-color: #1b04af;
+    color: rgb(52, 0, 156);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 15px 0;
+}
+
+.dropdown-menu a:hover {
+    background-color: #100085;
+}
+
+.menu-button {
+    position: fixed;
+    top: 10px; 
+    left: 10px;
+    background-color: #2006a29d;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+#container{
+    background-color: #000bd4;
+    padding: 20px; 
+    border-radius: 10px; 
+    max-width: 500px;
+    margin: 2em auto;
+    text-align: center; 
+    -webkit-text-fill-color: aliceblue;
+}
+
+#basisnett{
+    background-color: #000bd4;
+    padding: 20px; 
+    border-radius: 10px; 
+    max-width: 550px;
+    margin: 2em auto; 
+    -webkit-text-fill-color: aliceblue;
+text-align: center;
+}
