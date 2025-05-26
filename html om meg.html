@@ -26,7 +26,13 @@
 <script>
     fetch("menu.html")
         .then(res => res.text())
-        .then(html => document.getElementById("menu-placeholder").innerHTML = html);
+        .then(html => {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            const linkToRemove = tempDiv.querySelector('a[href="html om meg.html"]');
+            if (linkToRemove) linkToRemove.remove();
+            document.getElementById("menu-placeholder").innerHTML = tempDiv.innerHTML;
+        });
 
     document.addEventListener('click', e => {
         const menu = document.getElementById('dropdownMenu');

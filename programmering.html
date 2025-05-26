@@ -8,23 +8,24 @@
 </head>
 <body>
 
+    <div id="menu-placeholder"></div>
+    
     <header>
-        <h1>Min Portefølje</h1>
+        <h1>Konseptutvikling og programmering</h1>
     </header>
     <section id="welcome">
 <div id="container">
     <section id="about">
         <h2 id="velcomen">Velkomen</h2>
-        <p id="welcom">Mit navn er Svend</p>    
-        <p>Og her er noen av mine små Prosjekter</p>
+        <p>Hei og velkomen til min side om konseptutvikling og programmering. Her vil eg vise deg litt av det eg har lært og mine prosjekter</p>    
     </section>
 </div>
 </section>
 <section id="basisnett">
     <section id="projects" >
-            <h3>Cisco Packet Tracer</h3>
-            <p>Her har jeg laget et lite basis nett</p>
-            <button onclick="location.href='nettside.html'">Gå til nettside</button>
+            <h3>Netside om spil</h3>
+            <p>her har eg laget ein netside av top spel</p>
+            <button class="netside_om_spel" onclick="location.href='nettside.html'">Gå til nettside</button>
     </section>
 </section>
 
@@ -35,7 +36,13 @@
     <script>
         fetch("menu.html")
             .then(res => res.text())
-            .then(html => document.getElementById("menu-placeholder").innerHTML = html);
+            .then(html => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                const linkToRemove = tempDiv.querySelector('a[href="programmering.html"]');
+                if (linkToRemove) linkToRemove.remove();
+                document.getElementById("menu-placeholder").innerHTML = tempDiv.innerHTML;
+            });
     
         document.addEventListener('click', e => {
             const menu = document.getElementById('dropdownMenu');

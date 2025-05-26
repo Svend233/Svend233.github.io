@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Min Portefølje</title>
+    <link rel="stylesheet" href="css/main css.css">
 </head>
 <body>
-    <h1>Placeholder</h1>
+    <header>
+        <h1>produksjon og historiefortelling</h1>
+        <div id="menu-placeholder"></div>
+    </header>
+
+<section id="welcome">
+<div id="container">
+    <section id="about">
+        <h2 id="velcomen">Hei og velkomen til min side om produksjon og historiefortelling</h2>
+        <p>Her vil eg vise deg litt av det eg har lært og mine prosjekter</p>
+    </section>
+</div>
+
+<section id="basisnett">
+    <section id="projects" >
+            <h3>Visit kort</h3>
+            <p>Her har eg laget eit visit kort</p>
+            <img src="bilder/visit kort.png" alt="visit kort" width="500" height="300">
+            <img src="bilder/visit kort bak.png" alt="visit kort bak" width="500" height="300">
+    </section>
+</section>
+
+    <footer>
+        <p>&copy; 2025 Code Buddies</p>
+    </footer>
+
+    <script>
+        fetch("menu.html")
+            .then(res => res.text())
+            .then(html => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                const linkToRemove = tempDiv.querySelector('a[href="produksjon.html"]');
+                if (linkToRemove) linkToRemove.remove();
+                document.getElementById("menu-placeholder").innerHTML = tempDiv.innerHTML;
+            });
+    
+        document.addEventListener('click', e => {
+            const menu = document.getElementById('dropdownMenu');
+            const button = document.querySelector('.menu-button');
+            if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            if (menu) menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+
 </body>
 </html>

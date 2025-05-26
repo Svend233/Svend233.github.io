@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Portefølje</title>
+    <title>teknologiforståelse</title>
     <link rel="stylesheet" href="css/main css.css">
 </head>
 <body>
 
     <header>
-        <h1>Min Portefølje</h1>
+        <h1>teknologiforståelse</h1>
         <div id="menu-placeholder"></div>
     </header>
     <section id="welcome">
 <div id="container">
     <section id="about">
         <h2 id="velcomen">Velkomen</h2>
-        <p id="welcom">Mit navn er Svend</p>    
-        <p>Og her er noen av mine små Prosjekter</p>
+        <p>Hei og velkomen til min side om teknologiforståelse. Her vil eg vise deg litt av det eg har lært og mine prosjekter</p>    
     </section>
 </div>
 </section>
@@ -27,6 +26,16 @@
             <p>Her har jeg laget et lite basis nett</p>
             <img src="bilder/basisnett.png" alt="Basis nett" width="500" height="300">
     </section>
+</section>
+<section>
+    <section id="ruter" >
+            <h3>Ruter</h3>
+            <p>her har eg laget ein ruter som funker</p>
+            <img src="bilder/ruter.png" alt="Ruter" width="500" height="300">
+    </section>
+
+    <section></section>
+
 </section>
 
     <footer>
@@ -38,7 +47,13 @@
     <script>
         fetch("menu.html")
             .then(res => res.text())
-            .then(html => document.getElementById("menu-placeholder").innerHTML = html);
+            .then(html => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                const linkToRemove = tempDiv.querySelector('a[href="teknologiforståelse.html"]');
+                if (linkToRemove) linkToRemove.remove();
+                document.getElementById("menu-placeholder").innerHTML = tempDiv.innerHTML;
+            });
     
         document.addEventListener('click', e => {
             const menu = document.getElementById('dropdownMenu');

@@ -20,14 +20,6 @@
         <p>Og her er noen av mine små Prosjekter</p>
     </section>
 </div>
-</section>
-<section id="basisnett">
-    <section id="projects" >
-            <h3>Cisco Packet Tracer</h3>
-            <p>Her har jeg laget et lite basis nett</p>
-            <img src="bilder/basisnett.png" alt="Basis nett" width="500" height="300">
-    </section>
-</section>
 
     <footer>
         <p>&copy; 2025 Code Buddies</p>
@@ -36,7 +28,13 @@
     <script>
         fetch("menu.html")
             .then(res => res.text())
-            .then(html => document.getElementById("menu-placeholder").innerHTML = html);
+            .then(html => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                const linkToRemove = tempDiv.querySelector('a[href="index.html"]');
+                if (linkToRemove) linkToRemove.remove();
+                document.getElementById("menu-placeholder").innerHTML = tempDiv.innerHTML;
+            });
     
         document.addEventListener('click', e => {
             const menu = document.getElementById('dropdownMenu');

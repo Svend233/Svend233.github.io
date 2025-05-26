@@ -89,3 +89,30 @@ h3{
     -webkit-text-fill-color: aliceblue;
 text-align: center;
 }
+#ruter {
+    background-color: #000bd4;
+    padding: 20px; 
+    border-radius: 10px; 
+    max-width: 550px;
+    margin: 2em auto; 
+    -webkit-text-fill-color: aliceblue;
+}
+
+button.netside_om_spel {
+    background-color: #ff0000; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.netside_om_spel:hover {
+    background-color: #830000; 
+}
+
