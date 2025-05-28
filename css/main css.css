@@ -88,6 +88,7 @@ h3{
     margin: 2em auto; 
     -webkit-text-fill-color: aliceblue;
 text-align: center;
+
 }
 #ruter {
     background-color: #000bd4;
@@ -98,8 +99,10 @@ text-align: center;
     -webkit-text-fill-color: aliceblue;
 }
 
+
+
 button.netside_om_spel {
-    background-color: #ff0000; 
+    background-color: #c60202; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -116,3 +119,70 @@ button.netside_om_spel:hover {
     background-color: #830000; 
 }
 
+button.pc-componenter {
+    background-color: #c60202; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button.pc-componenter:hover {
+    background-color: #830000; 
+}
+
+.link-box a{
+    color: #e5e5e5;
+    padding-left: 100px;
+    background-color: #3201ba;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.link-box a:hover{
+background-color: #070070;
+color: #ec0000;
+}
+
+.hovud-meny a{
+        color: #e5e5e5;
+    padding-left: 60px;
+    background-color: #3201ba;
+    border: none;
+    color: white;
+    padding: 20px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 4px 25px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 3vh;
+    padding-left: 60px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.hovud-meny a:hover{
+background-color: #070070;
+color: #ec0000;
+}
+
+#ruter-tlf{
+    align-items: center;
+    justify-content: center;
+    margin-left: 155px;
+    }
